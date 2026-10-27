@@ -1,0 +1,105 @@
+# Escrito desde el panel de PTMS.
+
+[nucleus]
+mcc = 901
+mnc = 9999
+listen = "0.0.0.0:7400"
+
+[dashboard]
+listen = "127.0.0.1:7480"
+user = "admin"
+password = "1234"
+# Canal OTA: "stable" → latest-stable (rama main). "beta" → latest-beta.
+ota_channel = "stable"
+
+[[cells]]
+name = "Casa"
+token = "ptms-49303034a790e105fe"
+carrier = 1530
+colour_code = 1
+location_area = 1
+cell_identifier = 1
+tx = "438.250000"
+rx = "430.650000"
+dual = false
+freq_band = 4
+duplex_id = 7
+custom_duplex = "7.600000"
+freq_offset = 0
+reverse = false
+
+[[cells]]
+name = "Oficina"
+token = "ptms-1ce38d0d024549330f"
+carrier = 1550
+colour_code = 1
+location_area = 2
+cell_identifier = 2
+tx = "438.750000"
+rx = "431.150000"
+dual = false
+freq_band = 4
+duplex_id = 7
+custom_duplex = "7.600000"
+freq_offset = 0
+reverse = false
+
+[security]
+issi_whitelist = []
+
+[air]
+timezone = ""
+system_wide = true
+late_entry = true
+voice = true
+recovery = false
+local_ssi = ""
+
+[services.telegram]
+enabled = false
+token = ""
+chats = []
+cells = true
+calls = true
+sds = false
+lip = false
+
+[services.dapnet]
+enabled = false
+callsign = ""
+authkey = ""
+transmitter = ""
+sds_gssi = 0
+
+[services.geoalarm]
+enabled = false
+lat = 0
+lon = 0
+radius_m = 500
+cooldown_secs = 300
+forward_telegram = false
+forward_sds = false
+sds_dest = 0
+whitelist = []
+
+[services.pabx]
+enabled = false
+host = ""
+port = 5060
+extension = ""
+secret = ""
+
+[services.dispatch]
+enabled = false
+groups = []
+
+[services.audio]
+enabled = false
+gssi = 0
+
+[services.public]
+enabled = false
+
+[profiles]
+net = ""
+brew = ""
